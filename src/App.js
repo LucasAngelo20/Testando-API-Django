@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Dashboard from './Pages/Dashboard'
+import Pontosturisticos from './Pages/Pontosturisticos'
+import Error from './Pages/Error'
+
+import './App.css'
+
+export default function App() {
+    return (
+        <main>
+            <Switch>
+                <Route path="/" component={Dashboard} exact />
+                <Route path="/pontoturistico" component={Pontosturisticos} />
+                <Route component={Error} />
+            </Switch>
+        </main>
+    )
 }
-
-export default App;
