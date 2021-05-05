@@ -14,12 +14,16 @@ export const Navbar = styled.div`
         text-decoration: none;
         color: #fff;
         margin: 20px;
-        font-size: 18px;
+        font-size: 16px;
         text-transform: uppercase;
         font-weight: bold;
+        background-color: #000;
+        padding: 10px;
+        border-radius: 20px;
 
         &:hover{
-            color: red;
+            color: #000;
+            background-color:#fff;
             transition: 0.5s all;
         }
     }
